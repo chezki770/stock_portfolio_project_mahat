@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Portfolio Management System - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-chart-line"></i> Stock Portfolio Management System</h1>
+        <div id="mainSection">
+            <h2>Welcome, <span id="welcomeName"></span>!</h2>
+            <div class="action-buttons">
+                <button onclick="buyStocks()"><i class="fas fa-shopping-cart"></i> Buy Stocks</button>
+                <button onclick="sellStocks()"><i class="fas fa-dollar-sign"></i> Sell Stocks</button>
+                <button onclick="showPortfolio()"><i class="fas fa-folder-open"></i> Show Portfolio</button>
+                <button onclick="updateStockPrices()"><i class="fas fa-sync"></i> Update Stock Prices</button>
+                <button onclick="evaluateStock()"><i class="fas fa-search-dollar"></i> Evaluate Stock</button>
+                <button onclick="evaluatePortfolio()"><i class="fas fa-balance-scale"></i> Evaluate Portfolio</button>
+                <button onclick="showComprehensiveRiskReport()"><i class="fas fa-file-alt"></i> Comprehensive Risk Report</button>
+                <button onclick="goBack()"><i class="fas fa-sign-out-alt"></i> Log Out</button>
+            </div>
+            <div id="resultSection">
+                <h3>Results:</h3>
+                <div id="results"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
