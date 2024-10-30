@@ -84,19 +84,6 @@ async function addInvestor(investorName) {
     }
 }
 
-// async function showGrowth(investorName) {
-//     const client = pool.connect();
-//     try {
-//         const query = 
-//         SELECT p.date, s.symbol, p.shares, s.price
-//         FROM portfolios p
-//         JOIN stocks s on p.stock_symbol = s.symbol
-//         JOIN investors i on p.investors_id = i.id
-//         WHERE i.id = $1
-//         order by p.date
-//         ;
-//     }
-// }
 
 async function showPortfolio(investorName) {
     const client = await pool.connect();
