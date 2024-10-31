@@ -8,8 +8,8 @@ const {
   sellStocks,
   showPortfolio,
   updateStockPrices,
-  evaluateStockRisk,
-  evaluatePortfolioRisk
+//   evaluateStockRisk,
+//   evaluatePortfolioRisk
 } = require('./backend/InvestmentSystem');
 
 const app = express();
@@ -88,25 +88,25 @@ app.post('/update-prices', async (req, res) => {
   }
 });
 
-app.get('/evaluate-stock/:symbol', async (req, res) => {
-  const { symbol } = req.params;
-  try {
-    const riskAssessment = await evaluateStockRisk(symbol);
-    res.json({ riskAssessment });
-  } catch (error) {
-    res.status(400).json({ error: error.message });
-  }
-});
+// app.get('/evaluate-stock/:symbol', async (req, res) => {
+//   const { symbol } = req.params;
+//   try {
+//     const riskAssessment = await evaluateStockRisk(symbol);
+//     res.json({ riskAssessment });
+//   } catch (error) {
+//     res.status(400).json({ error: error.message });
+//   }
+// });
 
-app.get('/evaluate-portfolio/:investorName', async (req, res) => {
-  const { investorName } = req.params;
-  try {
-    const riskAssessment = await evaluatePortfolioRisk(investorName);
-    res.json({ riskAssessment });
-  } catch (error) {
-    res.status(400).json({ error: error.message });
-  }
-});
+// app.get('/evaluate-portfolio/:investorName', async (req, res) => {
+//   const { investorName } = req.params;
+//   try {
+//     const riskAssessment = await evaluatePortfolioRisk(investorName);
+//     res.json({ riskAssessment });
+//   } catch (error) {
+//     res.status(400).json({ error: error.message });
+//   }
+// });
 
 // Error handling middleware
 app.use((err, req, res, next) => {
